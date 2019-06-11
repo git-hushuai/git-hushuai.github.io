@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://git-hushuai.github.io</id>
     <title>shuaike</title>
-    <updated>2019-06-11T07:44:23.069Z</updated>
+    <updated>2019-06-11T07:57:26.341Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://git-hushuai.github.io"/>
     <link rel="self" href="https://git-hushuai.github.io/atom.xml"/>
@@ -108,7 +108,8 @@
         <link href="https://git-hushuai.github.io/post/ios-about-weak">
         </link>
         <updated>2019-06-11T07:12:30.000Z</updated>
-        <content type="html"><![CDATA[<h4 id="weak表结构">weak表结构</h4>
+        <content type="html"><![CDATA[<!-- more -->
+<h4 id="weak表结构">weak表结构</h4>
 <blockquote>
 <p>weak_table_t是一个全局weak引用的表，使用对象的地址作为key，用weak_entry_t类型结构体对象作为value。</p>
 </blockquote>
