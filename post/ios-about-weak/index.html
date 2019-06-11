@@ -4,7 +4,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>iOS关于weak的实现原理 | shuaike</title>
-<link rel="shortcut icon" href="https://git-hushuai.github.io/favicon.ico?v=1560239991704">
+<link rel="shortcut icon" href="https://git-hushuai.github.io/favicon.ico?v=1560240102854">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://git-hushuai.github.io/styles/main.css">
@@ -20,7 +20,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://git-hushuai.github.io">
-  <img class="avatar" src="https://git-hushuai.github.io/images/avatar.png?v=1560239991704" alt="">
+  <img class="avatar" src="https://git-hushuai.github.io/images/avatar.png?v=1560240102854" alt="">
   </a>
   <h1 class="site-title">
     shuaike
@@ -539,10 +539,9 @@ weak_entry_for_referent(weak_table_t *weak_table, objc_object *referent)
 <li>初始化弱引用对象流程一览</li>
 </ul>
 <p>弱引用的初始化，从上文的分析中可以看出，主要的操作部分就在弱引用表的取键、查询散列、创建弱引用表等操作，可以总结如下的流程：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/2664540-255e050c9fafa044.png?imageMogr2/auto-orient/" alt=""></p>
 <p><img src="https://git-hushuai.github.io/post-images/1560239988159.png" alt=""></p>
 <p>对weak进行存储的过程可以通过下边的流程图详细的描述出来：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/2664540-2d3b53046d67d907.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600" alt=""></p>
+<p><img src="https://git-hushuai.github.io/post-images/1560240100561.png" alt=""></p>
 <h4 id="weak释放为nil的过程">weak释放为nil的过程</h4>
 <blockquote>
 <p>weak 被释放为nil，整个对象的释放整体流程为：</p>
