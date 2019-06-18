@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://git-hushuai.github.io</id>
     <title>shuaike</title>
-    <updated>2019-06-18T03:53:41.267Z</updated>
+    <updated>2019-06-18T03:59:01.092Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://git-hushuai.github.io"/>
     <link rel="self" href="https://git-hushuai.github.io/atom.xml"/>
@@ -40,9 +40,9 @@
 <p><strong>objc_class 定义:</strong></p>
 <p><img src="https://git-hushuai.github.io/post-images/1560829991324.png" alt=""></p>
 <p><strong>objc_object 定义：</strong></p>
-<p>![](/Users/shuaike/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/718401263/QQ/Temp.db/04F54C3E-C08D-4E35-8DF8-1FBFAB834F29.png)</p>
+<p><img src="https://git-hushuai.github.io/post-images/1560830129629.png" alt=""></p>
 <p><strong>class_rw_t 定义：</strong></p>
-<p>![](/Users/shuaike/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/718401263/QQ/Temp.db/0B131962-9CAA-4E00-A84E-6D54E2E3B656.png)</p>
+<p><img src="https://git-hushuai.github.io/post-images/1560830177486.png" alt=""></p>
 <p>可以看到，在class_rw_t 中存储着类的</p>
 <ul>
 <li>
@@ -61,7 +61,7 @@
 <p>而<strong>class_rw_t</strong>是通过bits调用data得到的，我们来到data方法内部实现，我们可以看到，data函数内部仅仅是对bits进行&amp;FAST_DATA_MASK进行位运算操作,只取其中的 [3, 47] 位转换成 class_rw_t * 返回。</p>
 <p>在 x86_64 架构上，Mac OS 只使用了其中的 47 位来为对象分配地址。而且由于地址要按字节在内存中按字节对齐，所以掩码的后三位都是 0。</p>
 <p>因为class_rw_t * 指针只存于第【3，47】位，所以可以使用最后三位来存储关于当前类的其他信息：</p>
-<p><img src="/Users/shuaike/Desktop/1463472850397719.jpg" alt=""></p>
+<p><img src="https://git-hushuai.github.io/post-images/1560830206769.jpg" alt=""></p>
 <pre><code>// class is a Swift class
 #define FAST_IS_SWIFT           (1UL&lt;&lt;0)
 // class's instances requires raw isa
@@ -84,12 +84,12 @@
 </li>
 </ul>
 <p>执行 class_data_bits_t 结构体中的 data() 方法或者调用 objc_class 中的 data() 方法会返回同一个 class_rw_t * 指针，因为 objc_class 中的方法只是对 class_data_bits_t 中对应方法的封装。</p>
-<p>![](/Users/shuaike/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/718401263/QQ/Temp.db/4BCD0267-CC9F-4865-BE67-123783DCCB96.png)</p>
+<p><img src="https://git-hushuai.github.io/post-images/1560830251713.png" alt=""></p>
 <p>从class_rw_t结构体中可以看到其中有一个指向常量的指针ro,其中存储了当前类在编译期就已经确定的属性、方法以及遵循的协议。</p>
 <p><strong>class_ro_t 定义：</strong></p>
-<p>![](/Users/shuaike/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/718401263/QQ/Temp.db/B8130D07-F3BA-4FDD-BEF0-E905CC5F5E02.png)</p>
+<p><img src="https://git-hushuai.github.io/post-images/1560830276842.png" alt=""></p>
 <p>在编译期类的结构中的class_data_bits_t *data指向的是一个class_ro_t *指针。</p>
-<p><img src="/Users/shuaike/Desktop/1463472924453436.jpg" alt=""></p>
+<p><img src="https://git-hushuai.github.io/post-images/1560830300461.jpg" alt=""></p>
 <p>然后在类加载的过程中在realizeClass方法中：</p>
 <ul>
 <li>
@@ -231,7 +231,7 @@ static Class realizeClass(Class cls)
 }
 </code></pre>
 <p>下图是realizeClass方法执行过后的类所占用的内存的布局，通过对比可以看到：</p>
-<p><img src="/Users/shuaike/Desktop/1463473009766529.jpg" alt=""></p>
+<p><img src="https://git-hushuai.github.io/post-images/1560830326639.jpg" alt=""></p>
 <p>但是，在这段代码运行之后class_rw_t中的方法、属性以及协议列表均为空，这时需要realizeClass调用methodizeClass方法来将类自己实现的方法（包括分类）、属性和遵循的协议加载到methods、properties和protocols列表中。</p>
 <p>总结：</p>
 <ul>
