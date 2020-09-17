@@ -2,14 +2,23 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://git-hushuai.github.io</id>
     <title>shuaike</title>
-    <updated>2019-06-18T04:21:05.412Z</updated>
+    <updated>2020-09-17T07:47:43.245Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://git-hushuai.github.io"/>
     <link rel="self" href="https://git-hushuai.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
     <logo>https://git-hushuai.github.io/images/avatar.png</logo>
     <icon>https://git-hushuai.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2019, shuaike</rights>
+    <rights>All rights reserved 2020, shuaike</rights>
+    <entry>
+        <title type="html"><![CDATA[image]]></title>
+        <id>https://git-hushuai.github.io/post/image</id>
+        <link href="https://git-hushuai.github.io/post/image">
+        </link>
+        <updated>2019-11-04T09:06:11.000Z</updated>
+        <content type="html"><![CDATA[<p><img src="https://git-hushuai.github.io/post-images/1572858421387.png" alt=""></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[iOS Class对象解析]]></title>
         <id>https://git-hushuai.github.io/post/ios-about-class</id>
