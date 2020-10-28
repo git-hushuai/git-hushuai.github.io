@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://git-hushuai.github.io/favicon.ico?v=1600328859618">
+<link rel="shortcut icon" href="https://git-hushuai.github.io/favicon.ico?v=1603852841936">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://git-hushuai.github.io/styles/main.css">
 
@@ -30,7 +30,7 @@
   <div class="site-header">
     <div class="left">
       <a href="https://git-hushuai.github.io">
-        <img class="avatar" src="https://git-hushuai.github.io/images/avatar.png?v=1600328859618" alt="" width="32px" height="32px">
+        <img class="avatar" src="https://git-hushuai.github.io/images/avatar.png?v=1603852841936" alt="" width="32px" height="32px">
       </a>
       <a href="https://git-hushuai.github.io">
         <h1 class="site-title">shuaike</h1>
@@ -87,7 +87,7 @@
               <span>
                 <i class="icon-pricetags-outline"></i>
                 
-                  <a href="https://git-hushuai.github.io/tag/iOS">
+                  <a href="https://git-hushuai.github.io/tag/iOS/">
                     iOS
                     
                   </a>
@@ -152,7 +152,7 @@ struct weak_table_t {
 };
 </code></pre>
 <blockquote>
-<p>在weak_entry_t 结构体中，DisguisedPtr referent 是对泛型对象的指针做了一层封装，通过这个泛型类来解决内存泄露的问题，
+<p>在weak_entry_t 结构体中，DisguisedPtr referent 是对泛型对象的指针做了一层封装，通过这个泛型类来解决内存泄露的问题，<br>
 objc_object 是weak_entry_t表中weak弱引用对象的范型对象的结构体。</p>
 </blockquote>
 <pre><code>struct objc_object {
@@ -547,9 +547,9 @@ weak_entry_for_referent(weak_table_t *weak_table, objc_object *referent)
 <li>初始化弱引用对象流程一览</li>
 </ul>
 <p>弱引用的初始化，从上文的分析中可以看出，主要的操作部分就在弱引用表的取键、查询散列、创建弱引用表等操作，可以总结如下的流程：</p>
-<p><img src="https://git-hushuai.github.io/post-images/1560239988159.png" alt=""></p>
+<figure data-type="image" tabindex="1"><img src="https://git-hushuai.github.io/post-images/1560239988159.png" alt="" loading="lazy"></figure>
 <p>对weak进行存储的过程可以通过下边的流程图详细的描述出来：</p>
-<p><img src="https://git-hushuai.github.io/post-images/1560240100561.png" alt=""></p>
+<figure data-type="image" tabindex="2"><img src="https://git-hushuai.github.io/post-images/1560240100561.png" alt="" loading="lazy"></figure>
 <h4 id="weak释放为nil的过程">weak释放为nil的过程</h4>
 <blockquote>
 <p>weak 被释放为nil，整个对象的释放整体流程为：</p>

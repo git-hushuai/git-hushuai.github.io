@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://git-hushuai.github.io/favicon.ico?v=1600328859618">
+<link rel="shortcut icon" href="https://git-hushuai.github.io/favicon.ico?v=1603852841936">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://git-hushuai.github.io/styles/main.css">
 
@@ -30,7 +30,7 @@
   <div class="site-header">
     <div class="left">
       <a href="https://git-hushuai.github.io">
-        <img class="avatar" src="https://git-hushuai.github.io/images/avatar.png?v=1600328859618" alt="" width="32px" height="32px">
+        <img class="avatar" src="https://git-hushuai.github.io/images/avatar.png?v=1603852841936" alt="" width="32px" height="32px">
       </a>
       <a href="https://git-hushuai.github.io">
         <h1 class="site-title">shuaike</h1>
@@ -90,7 +90,7 @@
               <span>
                 <i class="icon-pricetags-outline"></i>
                 
-                  <a href="https://git-hushuai.github.io/tag/iOS">
+                  <a href="https://git-hushuai.github.io/tag/iOS/">
                     iOS
                     
                   </a>
@@ -116,7 +116,7 @@
 }
 </code></pre>
 <p>打印结果：</p>
-<p><img src="https://raw.githubusercontent.com/SunshineBrother/JHBlog/master/iOS%E7%9F%A5%E8%AF%86%E7%82%B9/iOS%E5%BA%95%E5%B1%82/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/AutoreleasePool.png" alt=""></p>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/SunshineBrother/JHBlog/master/iOS%E7%9F%A5%E8%AF%86%E7%82%B9/iOS%E5%BA%95%E5%B1%82/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/AutoreleasePool.png" alt="" loading="lazy"></figure>
 <p>如果使用autorelease，就需要用到自动缓存池，代码如下：</p>
 <pre><code>int main(int argc, const char * argv[]) {
 	@autoreleasepool {
@@ -128,8 +128,8 @@
 	return 0;
 }
 </code></pre>
-<p><strong>AutoreleasePool具体做了什么呢？ 我们首先查看</strong>AutoreleasePool的实现原理
- 
+<p><strong>AutoreleasePool具体做了什么呢？ 我们首先查看</strong>AutoreleasePool的实现原理<br>
+ <br>
  通过:</p>
 <pre><code>xcrun -sdk iphoneos clang -arch arm64 -rewrite-objc main.m 命令将 main.m 转成 C++ 代码
 </code></pre>
@@ -362,7 +362,7 @@ _objc_autoreleasePoolPop()来释放自动释放池。这个 Observer 的 order �
 
         
           <div class="next-post">
-            <a class="purple-link" href="https://git-hushuai.github.io/post/ios-about-runtime">
+            <a class="purple-link" href="https://git-hushuai.github.io/post/ios-about-runtime/">
               <h3 class="post-title">
                 下一篇：iOS-Runtime运行时基本函数
               </h3>
